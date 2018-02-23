@@ -9,9 +9,9 @@ if __name__ == '__main__':
     if pid < 0:
         print 'error in fork'
     elif pid == 0:
-        print 'I am child process(%s) and my parent process is (%s)',(os.getpid(),os.getppid())
+        print 'I am child process(%s)'%os.getpid() + ' and my parent process is %s'%os.getppid()
     else:
-        print 'I(%s) created a chlid process (%s).',(os.getpid(),pid)
+        print 'I(%s)'%os.getpid()  + 'created a chlid process (%s)'%pid
 '''
 '''
 第二种方法：使用multiprocessing模块创建多进程
